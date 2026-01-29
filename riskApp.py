@@ -14,7 +14,7 @@ def assess_risk(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12_selected, q12_
     if q1 == "Yes":
         risk += 0
     elif q1 == "Not Sure":
-        risk += 100
+        risk += 90
     else:
         risk += 1000
     risk += 1000 if q2 == "Yes" else 0
@@ -33,13 +33,13 @@ def assess_risk(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12_selected, q12_
 
     # --- Benefit scoring ---
     benefit += q9  # higher cost saving = higher benefit
-    risk += q9 // 2  # higher cost saving = lower risk
+    risk += (100-q9) // 2  # higher cost saving = lower risk
     benefit += 0 if q10 == "Yes" else 50
 
     # --- Map Risk to category ---  Change thresholds for risk categories here ---
     if risk <= 50:
         risk_category = "Low"
-    elif risk <= 150:
+    elif risk <= 101:
         risk_category = "Medium"
     elif risk <= 900:
         risk_category = "High"
