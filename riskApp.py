@@ -28,7 +28,7 @@ def assess_risk(q1, q2, q3, q4, q5, q6, q66, q7, q8, q9, q10, q11, q12_selected,
         risk += 90
     else:
         risk += 1000
-    risk += 1000 if q2 == "Yes" else 0
+    risk += 0 if q2 == "Yes" else 1000
     risk += 0 if q3 == "Yes" else 100
     risk += 1000 if q4 == "Yes" else 0 #1000 for no purchase under any circumstance
     risk += 0 if q5 == "Yes" else 100
@@ -95,9 +95,9 @@ st.write("Answer the questions below:")
 
 # --- Questions ---
 q1 = st.radio("1. Q1 Can we confirm the listing is ligitimate?", ["Yes", "No", "Not Sure"])
-q2 = st.radio("2. Q2 Can we confirm the provenance of device?", ["Yes", "No", "Not Sure"])
-q3 = st.radio("3. Q3 Are we able to confirm why the device is being sold?", ["Yes", "No", "Not Sure"])
-q4 = st.radio("4. Q4 Does this device have a field safety notice/patient safety alert?", ["Yes", "No", "Not Sure"])
+q2 = st.radio("2. Q2 Can we confirm the provenance of device?", ["Yes", "No"])
+q3 = st.radio("3. Q3 Are we able to confirm why the device is being sold?", ["Yes", "No"])
+q4 = st.radio("4. Q4 Does this device have a field safety notice/patient safety alert?", ["Yes", "No"])
 q5 = st.radio("5. Q5 Will this device be able to be maintained locally?", ["Yes", "No"])
 q6 = st.radio("6. Q6 Does the listing indicate the device is fully functional and not damaged?", ["Yes", "No"])
 q66 = st.radio("66. Q6b Does the listing indicate the device has been modified or tampered with?", ["Yes", "No"])
