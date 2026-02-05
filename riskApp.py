@@ -17,7 +17,7 @@ html, body, [class*="css"]  {
 """, unsafe_allow_html=True)
 
 # -------------------- Assessment Function --------------------
-def assess_risk(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12_selected, q12_options):
+def assess_risk(q1, q2, q3, q4, q5, q6, q66, q7, q8, q9, q10, q11, q12_selected, q12_options):
     risk = 0
     benefit = 0
 
@@ -104,7 +104,7 @@ q66 = st.radio("66. Q6b Does the listing indicate the device has been modified o
 q7 = st.radio("7. Q7 Does the original manufacturer still support the device?", ["Yes", "No"])
 q8 = st.radio("8. Q8 Does the device integrate with existing systems?", ["Yes", "No"])
 q9 = st.slider(
-    "9. Q9 Cost saving compared to buying new (0% = same price, 50% = half, 100% = free)",
+    "9. Q9 Cost saving compared to buying new (0% = same price, 50% = half price, 100% = free)",
     min_value=0, max_value=100
 )
 q10 = st.radio("10. Q10 Is the device available from a registered supplier or the original manufacturer?", ["Yes", "No"])
