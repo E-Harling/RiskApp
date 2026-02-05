@@ -109,7 +109,7 @@ q9 = st.slider(
 )
 q10 = st.radio("10. Q10 Is the device available from a registered supplier or the original manufacturer?", ["Yes", "No"])
 q11 = st.radio(
-    "11. Once purchased, will necessary testing ensure the device is functioning and safe?", ["Yes", "No"]
+    "11. Q11 Once purchased, will necessary testing ensure the device is functioning and safe?", ["Yes", "No"]
 )
 
 q12_options = [
